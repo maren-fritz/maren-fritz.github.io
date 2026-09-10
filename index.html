@@ -441,6 +441,7 @@ ul.task-list li input[type="checkbox"] {
                 div = window.document.createElement("div");
                 div.setAttribute("id", "code-annotation-line-highlight");
                 div.style.position = 'absolute';
+                div.style.pointerEvents = 'none';
                 parent.appendChild(div);
               }
               div.style.top = top - 2 + "px";
@@ -453,6 +454,7 @@ ul.task-list li input[type="checkbox"] {
                 gutterDiv.style.position = 'absolute';
                 const codeCell = window.document.getElementById(targetCell);
                 const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutterDiv.style.pointerEvents = 'none';
                 gutter.appendChild(gutterDiv);
               }
               gutterDiv.style.top = top - 2 + "px";
